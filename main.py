@@ -2,7 +2,6 @@ import os
 import streamlit as st
 from dotenv import load_dotenv
 import base64
-import plotly.express as px
 from langchain_core.messages import AIMessage, HumanMessage
 from langchain_community.llms import HuggingFaceEndpoint
 from langchain_core.output_parsers import StrOutputParser

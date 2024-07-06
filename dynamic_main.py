@@ -70,7 +70,12 @@ def dynamic_main_function():
     task = "text-generation"
     set_css()
     embed_video("images/Background_final_compressed.mp4")
-    st.title("Wanderlust Baba.AI ✈️")
+      
+    st.header("Introducing Wanderlust Baba.Ai - Your Ultimate Travel Sidekick")
+    st.markdown("""
+    Meet **Wanderlust Baba.Ai**, the travel assistant you never knew you needed! This advanced AI-powered chatbot is designed to turn your travel planning nightmares into a seamless, enjoyable experience. Think of it as your personal travel guru, packed with a sense of humor and just the right amount of sarcasm to keep things interesting.
+    """)
+
 
     # Define the template outside the function
     template = """

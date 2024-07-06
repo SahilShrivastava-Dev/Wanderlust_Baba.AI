@@ -69,7 +69,7 @@ def dynamic_main_function():
     repo_id = "mistralai/Mixtral-8x7B-Instruct-v0.1"
     task = "text-generation"
     set_css()
-    embed_video("images/background_final_compressed.mp4")
+    embed_video("images/Background_final_compressed.mp4")
     st.title("Wanderlust Baba.AI ✈️")
 
     # Define the template outside the function

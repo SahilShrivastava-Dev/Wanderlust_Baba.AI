@@ -38,9 +38,13 @@ page_bg_img = f'''
         background: transparent;
     }}
         
-    .stChatFloatingInputContainer {{
-        background: transparent;
-    }}
+    [data-testid="stBottom"] > div {{
+            background: transparent;
+        }}
+[data-testid="stVericalBlock"] > div {{
+    background-color: rgba(255, 255, 255, 0.8); /* Adjust the RGBA values and alpha (0.8) as needed */
+}}
+
 </style>
 '''
 st.markdown(page_bg_img, unsafe_allow_html=True)

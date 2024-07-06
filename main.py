@@ -41,10 +41,13 @@ page_bg_img = f'''
     [data-testid="stBottom"] > div {{
             background: transparent;
         }}
-[data-testid="stVericalBlock"] > div {{
-    background-color: rgba(255, 255, 255, 0.8); /* Adjust the RGBA values and alpha (0.8) as needed */
-}}
+    [data-testid="stChatMessage"] {{
+        background-color: rgba(255, 255, 255, 0.5); /* White color with 50% opacity */
+        padding: 10px; /* Adjust padding as needed */
+        border-radius: 10px; /* Rounded corners */
+        backdrop-filter: blur(5px); /* Blur the background */
 
+    }}
 </style>
 '''
 st.markdown(page_bg_img, unsafe_allow_html=True)

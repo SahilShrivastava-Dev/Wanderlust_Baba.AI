@@ -37,14 +37,6 @@ page_bg_img = f'''
     [data-testid="stHeader"], [data-testid="stToolbar"] {{
         background: transparent;
     }}
-    
-    /*Still Developing*/
-    .stVerticalBlockBorderWrapper {{
-        background: rgba(255, 255, 255, 0.2);  /* Semi-transparent background */
-        backdrop-filter: blur(100px);  /* Blur effect */
-        border-radius: 10px;  /* Optional: rounded corners */
-        padding: 20px;  /* Optional: padding inside the box */
-    }}
         
     .stChatFloatingInputContainer {{
         background: transparent;

@@ -1,0 +1,37 @@
+/* # page_bg_img = '''
+# <style>
+#     .stApp{
+#         background-image: url("https://img.goodfon.com/original/1920x1080/4/2d/kot-koshka-glaz-fon-chernyy.jpg");
+#         background-size: cover;
+#     }
+#     .stChatFloatingInputContainer{
+#         background: transparent;
+#     }
+# </style>
+# [data-testid="stAppViewContainer"] > .main {{
+# background-image: url("data:image/png;base64,{img}");
+# background-size: cover;
+# background-position: center;
+# background-repeat: no-repeat;
+# background-attachment: fixed;
+# }}
+
+# [data-testid="stSidebar"] > div:first-child {{
+# background-image: url("data:image/png;base64,{img}");
+# background-size: cover;
+# background-position: center; 
+# background-repeat: no-repeat;
+# background-attachment: fixed;
+# }}
+
+# [data-testid="stHeader"], [data-testid="stToolbar"] {{
+# background: transparent;
+# }}
+
+# [data-testid="stChatFloatingInputContainer"] {{
+# background: transparent;
+# border: none;
+
+# }}
+# </style>
+# ''' */

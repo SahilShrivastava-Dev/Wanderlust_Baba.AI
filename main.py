@@ -1,6 +1,8 @@
 import os
 import streamlit as st
 from dotenv import load_dotenv
+import base64
+import plotly.express as px
 from langchain_core.messages import AIMessage, HumanMessage
 from langchain_community.llms import HuggingFaceEndpoint
 from langchain_core.output_parsers import StrOutputParser
@@ -16,8 +18,45 @@ api_token = os.getenv('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')
 repo_id = "mistralai/Mixtral-8x7B-Instruct-v0.1"
 task = "text-generation"
 
-# App config
 st.set_page_config(page_title="Wanderlust Baba.AI",page_icon= "🌍")
+
+#Image in Background
+def get_img_as_base64(file_path):
+    with open(file_path, "rb") as img_file:
+        b64_string = base64.b64encode(img_file.read()).decode()
+    return b64_string
+
+img = get_img_as_base64("images/beach_image1.jpg")
+
+page_bg_img = f'''
+<style>
+    .stApp {{
+        background-image: url("data:image/png;base64,{img}");
+        background-size: cover;
+    }}
+    
+    [data-testid="stHeader"], [data-testid="stToolbar"] {{
+        background: transparent;
+    }}
+    
+    /*Still Developing*/
+    .stVerticalBlockBorderWrapper {{
+        background: rgba(255, 255, 255, 0.2);  /* Semi-transparent background */
+        backdrop-filter: blur(100px);  /* Blur effect */
+        border-radius: 10px;  /* Optional: rounded corners */
+        padding: 20px;  /* Optional: padding inside the box */
+    }}
+        
+    .stChatFloatingInputContainer {{
+        background: transparent;
+    }}
+</style>
+'''
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
+# App config
 st.title("Wanderlust Baba.AI ✈️")
 
 # Define the template outside the function

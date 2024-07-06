@@ -1,7 +1,7 @@
 
 # Wanderlust Baba.Ai - Smart Travel Assistant Chatbot
 
-[Wanderlust Baba.Ai] (https://wanderlustbaba.streamlit.app) is an advanced Travel Assistant Chatbot designed to revolutionize the travel industry by leveraging cutting-edge AI technologies. This project integrates MistralAI, Langchain, Hugging Face, and Streamlit to create a chatbot that enhances the travel planning experience, making it both easier and more enjoyable.
+[Wanderlust Baba.Ai](https://wanderlustbaba.streamlit.app) is an advanced Travel Assistant Chatbot designed to revolutionize the travel industry by leveraging cutting-edge AI technologies. This project integrates MistralAI, Langchain, Hugging Face, and Streamlit to create a chatbot that enhances the travel planning experience, making it both easier and more enjoyable.
 
 ## Learning Objectives
 

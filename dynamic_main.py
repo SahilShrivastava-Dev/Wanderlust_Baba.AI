@@ -57,20 +57,8 @@ def get_video_as_base64(file_path):
     return b64_string
 
 
-# App config
-def dynamic_main_function():
-    # Load environment variables from .env file
-    load_dotenv()
-
-    # Get the API token from environment variable
-    api_token = os.getenv('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')
-
-    # Define the repository ID and task
-    repo_id = "mistralai/Mixtral-8x7B-Instruct-v0.1"
-    task = "text-generation"
-    set_css()
-    embed_video("images/Background_final_compressed.mp4")
-      
+def chatbot():
+    
     st.subheader("""
                     🌍Introducing **Wanderlust Baba.Ai**🌍 \n
                     
@@ -86,11 +74,20 @@ def dynamic_main_function():
 
                     Start your journey with Wanderlust Baba.Ai today and experience a new level of holidays. 🚀
                     """)
+    
+    # Load environment variables from .env file
+    load_dotenv()
 
+    # Get the API token from environment variable
+    api_token = os.getenv("HUGGINGFACEHUB_API_TOKEN")
+
+    # Define the repository ID and task
+    repo_id = "mistralai/Mixtral-8x7B-Instruct-v0.1"
+    task = "text-generation"
 
     # Define the template outside the function
     template = """
-    You are a  travel assistant chatbot your name is Wanderlust Baba.AI designed to help users plan their trips and provide travel-related information. Here are some scenarios you should be able to handle:
+    You are a  travel assistant chatbot your name is Wanderlust Baba.Ai designed to help users plan their trips and provide travel-related information. Here are some scenarios you should be able to handle:
 
     1. Booking Flights: Assist users with booking flights to their desired destinations. Ask for departure city, destination city, travel dates, and any specific preferences (e.g., direct flights, airline preferences). Check available airlines and book the tickets accordingly.
 
@@ -140,7 +137,7 @@ def dynamic_main_function():
     # Initialize session state
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = [
-            AIMessage(content="Hello, I am Wanderlust Baba.AI How can I help you?"),
+            AIMessage(content="Hello, I am Wanderlust Baba.Ai How can I help you?"),
         ]
 
     # Display chat history
@@ -164,12 +161,15 @@ def dynamic_main_function():
 
         # Remove any unwanted prefixes from the response
         response = response.replace("AI response:", "").replace("chat response:", "").replace("bot response:", "").strip()
+        response = response.replace("```", "").strip()
 
         with st.chat_message("AI"):
             st.write(response)
 
         st.session_state.chat_history.append(AIMessage(content=response))
 
-if __name__ == "__dynamic_main__":
 
-    dynamic_main_function()
+def dynamic_main_function():
+    set_css()
+    embed_video("images/Background_final_compressed.mp4")
+    chatbot()

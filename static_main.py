@@ -42,22 +42,35 @@ def static_main():
         [data-testid="stBottom"] > div {{
                 background: transparent;
             }}
-        [data-testid="stChatMessage"] {{
+        [data-testid="stChatMessage"] ,[data-testid="stHeading"]{{
             background-color: rgba(255, 255, 255, 0.5); /* White color with 50% opacity */
             padding: 10px; /* Adjust padding as needed */
             border-radius: 10px; /* Rounded corners */
-            backdrop-filter: blur(5px); /* Blur the background */
+            backdrop-filter: blur(3px); /* Blur the background */
 
         }}
+ 
     </style>
     '''
     st.markdown(page_bg_img, unsafe_allow_html=True)
 
     
-    st.header("Introducing Wanderlust Baba.Ai - Your Ultimate Travel Sidekick")
-    st.markdown("""
-    Meet **Wanderlust Baba.Ai**, the travel assistant you never knew you needed! This advanced AI-powered chatbot is designed to turn your travel planning nightmares into a seamless, enjoyable experience. Think of it as your personal travel guru, packed with a sense of humor and just the right amount of sarcasm to keep things interesting.
-    """)
+    # st.header("Introducing Wanderlust Baba.Ai - Your Ultimate Travel Sidekick")
+    st.subheader("""
+                    🌍Introducing **Wanderlust Baba.Ai**🌍 \n
+                    
+                    The advanced AI-powered chatbot designed to make travel planning effortless and enjoyable. ✨ As your personal travel guru, Wanderlust Baba.Ai provides:
+
+                    🗺️ **Expert Guidance:** Tailored travel recommendations just for you.
+
+                    📡 **Real-Time Updates:** Stay informed with the latest travel advisories and weather updates.
+
+                    ✈️ **Seamless Booking:** Effortlessly book flights, hotels, and activities.
+
+                    🌟 **Discover Hidden Gems:** Find local favorites and unique experiences.
+
+                    Start your journey with Wanderlust Baba.Ai today and experience a new level of holidays. 🚀
+                    """)
 
     # Define the template outside the function
     template = """

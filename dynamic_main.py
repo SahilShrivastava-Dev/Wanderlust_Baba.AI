@@ -32,11 +32,11 @@ def set_css():
             [data-testid="stBottom"] > div {
                 background: transparent;
             }
-            [data-testid="stChatMessage"] {
+            [data-testid="stChatMessage"],[data-testid="stHeading"] {
                 background-color: rgba(255, 255, 255, 0.5); 
                 padding: 10px; 
                 border-radius: 10px; 
-                backdrop-filter: blur(5px); 
+                backdrop-filter: blur(3px); 
             }
         </style>
     """, unsafe_allow_html=True)
@@ -71,10 +71,21 @@ def dynamic_main_function():
     set_css()
     embed_video("images/Background_final_compressed.mp4")
       
-    st.header("Introducing Wanderlust Baba.Ai - Your Ultimate Travel Sidekick")
-    st.markdown("""
-    Meet **Wanderlust Baba.Ai**, the travel assistant you never knew you needed! This advanced AI-powered chatbot is designed to turn your travel planning nightmares into a seamless, enjoyable experience. Think of it as your personal travel guru, packed with a sense of humor and just the right amount of sarcasm to keep things interesting.
-    """)
+    st.subheader("""
+                    🌍Introducing **Wanderlust Baba.Ai**🌍 \n
+                    
+                    The advanced AI-powered chatbot designed to make travel planning effortless and enjoyable. ✨ As your personal travel guru, Wanderlust Baba.Ai provides:
+
+                    🗺️ **Expert Guidance:** Tailored travel recommendations just for you.
+
+                    📡 **Real-Time Updates:** Stay informed with the latest travel advisories and weather updates.
+
+                    ✈️ **Seamless Booking:** Effortlessly book flights, hotels, and activities.
+
+                    🌟 **Discover Hidden Gems:** Find local favorites and unique experiences.
+
+                    Start your journey with Wanderlust Baba.Ai today and experience a new level of holidays. 🚀
+                    """)
 
 
     # Define the template outside the function

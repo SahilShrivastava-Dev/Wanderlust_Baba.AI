@@ -209,10 +209,10 @@ if "chat_history" not in st.session_state:
 for message in st.session_state.chat_history:
     if isinstance(message, AIMessage):
         with st.chat_message("AI"):
-            st.write(message.content)
+            st.markdown(message.content)
     elif isinstance(message, HumanMessage):
         with st.chat_message("Human"):
-            st.write(message.content)
+            st.markdown(message.content)
 
 # User input
 user_query = st.chat_input("Type your message here...")
@@ -225,10 +225,10 @@ if user_query is not None and user_query != "":
     response = get_response(user_query, st.session_state.chat_history)
 
     # Remove any unwanted prefixes from the response
-    response = response.replace("Ideal assistant response:","").replace("AI response:", "").replace("chat response:", "").replace("bot response:", "").replace("``` "," ").replace(" ```"," ").replace("How should I respond as Wanderlust Baba.Ai?","").strip()
+    response = response.replace("Ideal assistant response:","").replace("AI response:", "").replace("chat response:", "").replace("bot response:", "").replace("```"," ").replace("How should I respond as Wanderlust Baba.Ai?","").strip()
     
     with st.chat_message("AI"):
-        st.write(response)
+        st.markdown(response)
 
     st.session_state.chat_history.append(AIMessage(content=response))
 
